@@ -1,6 +1,5 @@
 #include <ESP8266WiFi.h> // Enables the ESP8266 to connect to the local network (via WiFi)
 #include "EasyNodeMCU_Wifi.h"
-#include "nodemculed.h"
 
 void setup_easy_wifi(const char* ssid, const char* password){
 
@@ -12,15 +11,13 @@ void setup_easy_wifi(const char* ssid, const char* password){
 
   // Wait until the connection has been confirmed before continuing
   while (WiFi.status() != WL_CONNECTED) {
-    toggle_LED();
     delay(500);
     Serial.print(".");
   }
 
   // Debugging - Output the IP Address of the ESP8266
-  Serial.println("WiFi connected");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
+	Serial.print("\n");
+	Serial.printf("WiFi connected, IP: %s\n", WiFi.localIP().toString().c_str());
 
 }
 
