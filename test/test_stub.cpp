@@ -2,8 +2,8 @@
 #include "EasyNodeMCU_Wifi.h"
 #include <unity.h>
 
-const char* easy_Wifi_SSID = "Doppler2"; //defined in main program
-const char* easy_Wifi_Password = "23345chicoryroad"; //defined in main program
+const char* easy_Wifi_SSID = "Unique"; //defined in main program
+const char* easy_Wifi_Password = "Unique"; //defined in main program
 
 void test_wifi_setup(){
 
